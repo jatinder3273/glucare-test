@@ -1,0 +1,16 @@
+{
+    "defaultLocale": "en",
+    "locales": [
+        "en",
+        "fr"
+    ],
+    "pages": {
+        "*": [
+            "common",
+            "header",
+            "profile",
+            "patient"
+        ],
+        "/patient/": []
+    }
+}

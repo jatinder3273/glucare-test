@@ -1,0 +1,53 @@
+@import "../../../../scss/var";
+.labDetail_page {
+  max-width: 1440px;
+  margin: auto;
+}
+.filter_dropdown {
+  button {
+    &::after {
+      display: none;
+    }
+  }
+}
+.filter_dropMenu {
+  left: -50% !important;
+  top: 8px !important;
+}
+
+.labSearch {
+  @include min(768) {
+    display: flex;
+    align-items: center;
+  }
+  & .filterBtn {
+    margin-left: 1rem;
+  }
+  :global(.searchBar) {
+    flex-grow: 1;
+    input {
+      width: 100%;
+    }
+    @include max(767) {
+      width: 100%;
+      margin-bottom: 8px;
+    }
+  }
+  & .labSearch_btnWrap {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+.labTest_back {
+  margin: 1.4rem 0 1.5rem;
+  button {
+    color: $primary;
+    font-weight: 500;
+    padding: 0;
+    svg {
+      margin-right: 10px;
+      height: 12px;
+      width: auto;
+    }
+  }
+}

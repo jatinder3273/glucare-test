@@ -1,0 +1,168 @@
+@import "../../../../scss/var";
+
+.expandWrap {
+  .wrap1 {
+    display: flex;
+  }
+  padding: 24px 20px;
+  display: flex;
+  box-shadow: inset 0px -1px 0px #eaecf0;
+  justify-content: space-between;
+
+  .profileDetail_singleField {
+    text-align: left;
+    margin-bottom: 0.5rem;
+    label {
+      color: $textSecondary;
+      font-size: 12px;
+    }
+    p {
+      font-size: 14px;
+      color: $textPrimary;
+    }
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  .profileDetail_doctor {
+    display: flex;
+    padding-top: 4px;
+    // align-items: center;
+    & .image {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      line-height: 0;
+    }
+    & .doctorName {
+      margin-left: 12px;
+      h6 {
+        color: $textPrimary;
+        line-height: 1;
+        font-size: 14px;
+        font-weight: 400;
+      }
+      span {
+        color: $textSecondary;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .diagnosisCard {
+    width: 331px;
+    padding: 8px 10px;
+    display: flex;
+    & .cardIcon {
+      margin-right: 10px;
+      color: $iconColor;
+      svg {
+        height: 20px;
+        max-width: 20px;
+      }
+    }
+    & .card_content {
+      flex-grow: 1;
+    }
+    & .card_tittle {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4px;
+      h5 {
+        color: $textColor;
+        font-size: 1rem;
+      }
+      & .card_schedule {
+        color: $iconColor;
+        cursor: pointer;
+        svg {
+          height: 20px;
+          max-width: 20px;
+        }
+      }
+      & .card_viewBtn {
+        color: $primary;
+        padding: 3px;
+        display: inline-block;
+        font-size: 14px;
+        cursor: pointer;
+      }
+    }
+    & .cardText {
+      margin-bottom: 10px;
+      p {
+        font-size: 14px;
+        color: $textPrimary;
+      }
+      span {
+        display: block;
+        color: $textSecondary;
+        font-size: 12px;
+        margin-bottom: 4px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    & .cardImages {
+      display: flex;
+      margin-top: 12px;
+      & .image {
+        margin-right: 8px;
+        width: 64px;
+      }
+    }
+    & .cardUnit {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      h6 {
+        font-size: 16px;
+        font-weight: 600;
+        color: $headingColor;
+        span {
+          color: $iconColor;
+          font-size: 14px;
+          margin-left: 4px;
+          font-weight: 400;
+        }
+      }
+
+      & .unitChanges {
+        display: flex;
+        gap: 7px;
+        color: $primary;
+        background-color: $secondary100;
+        padding: 4px 12px;
+        border-radius: 10px;
+        margin-left: 5px;
+        font-size: 12px;
+        display: inline-flex;
+        align-items: center;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .first {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .second {
+    margin-left: 8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .cardsWrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}

@@ -1,0 +1,132 @@
+@import "../../../../scss/var";
+
+.mainWrap {
+  display: flex;
+  flex-direction: column-reverse;
+
+  .selectWrap {
+    margin-top: 4px;
+    width: 100%;
+    display: flex;
+    border: 1px solid #ccd1db !important;
+    border-radius: 8px;
+    font-size: 14px;
+    color: $textPrimary;
+    height: 40px;
+    cursor: pointer;
+    padding: 0px 12px;
+    justify-content: space-between;
+    align-items: center;
+
+    .selectPlaceholder {
+      color: hsl(0, 0%, 50%);
+    }
+
+    .selectTxt {
+      text-align: center;
+      background-color: $secondary100;
+      font-size: 14px;
+      font-weight: 400;
+      padding: 3px 10px;
+      border-radius: 15px;
+    }
+
+    .selectToggle {
+      img {
+        height: 7px !important;
+        width: 12px !important;
+      }
+    }
+  }
+  .selectDoctorsWrap {
+    box-shadow: 0px 0px 8px rgba(107, 108, 126, 0.2);
+    border-radius: 8px;
+    padding: 10px 0;
+    background-color: #fff;
+    .clearAllWrap {
+      padding: 9px 16px;
+      display: flex;
+      justify-content: space-between;
+      .clearAll {
+        display: flex;
+        align-items: center;
+        input {
+          background-image: url("../../../../assets/icons/lineIcon.svg");
+          cursor: pointer;
+        }
+        label {
+          color: $headingColor;
+          font-weight: 400;
+          font-size: 14px;
+          pointer-events: none;
+        }
+      }
+
+      .clearAllTxt {
+        color: #1caec9;
+        font-weight: 400;
+        font-size: 14px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .selectBoxWrap {
+      padding: 2px 0 4px;
+      display: flex;
+      flex-direction: column;
+      max-height: 250px;
+      overflow-y: scroll;
+      .selectBox {
+        padding: 8px 16px;
+        display: flex;
+        justify-content: space-between;
+        .selectTxtWrap {
+          display: flex;
+          align-items: center;
+          input {
+            cursor: pointer;
+          }
+        }
+        .selectImage {
+          margin-left: 16px;
+          img {
+            height: 32px;
+            border-radius: 50%;
+          }
+        }
+        .labelTxt {
+          margin-left: 16px;
+          color: $headingColor;
+          font-weight: 400;
+          font-size: 14px;
+          pointer-events: none;
+        }
+
+        &:hover {
+          cursor: pointer;
+          background-color: $hoverItem;
+          .dragIcon {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+.select_dropdown {
+  > button {
+    width: 100%;
+    padding: 0;
+    text-align: left;
+    &::after {
+      display: none !important;
+    }
+  }
+}
+.select_dropdown_menu {
+  border: none;
+  bottom: -5px !important;
+  width: 100%;
+}

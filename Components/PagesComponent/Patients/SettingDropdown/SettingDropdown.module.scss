@@ -1,0 +1,73 @@
+@import "../../../../scss/var";
+
+.settingWrap {
+  .clearAllWrap {
+    padding: 9px 16px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: inset 0px -1px 0px #eaecf0;
+    .clearAll {
+      display: flex;
+      align-items: center;
+      input {
+        background-image: url("../../../../assets/icons/lineIcon.svg");
+        cursor: pointer;
+      }
+      label {
+        color: $headingColor;
+        font-weight: 400;
+        font-size: 14px;
+        pointer-events: none;
+      }
+    }
+
+    .clearAllTxt {
+      color: #1caec9;
+      font-weight: 400;
+      font-size: 14px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .selectBoxWrap {
+    padding: 8px 0px;
+    display: flex;
+    flex-direction: column;
+    .selectBox {
+      padding: 8px 16px;
+      display: flex;
+      justify-content: space-between;
+      .selectTxtWrap {
+        display: flex;
+        align-items: center;
+        input {
+          cursor: pointer;
+        }
+        label {
+          color: $headingColor;
+          font-weight: 400;
+          font-size: 14px;
+          pointer-events: none;
+        }
+      }
+      .dragIcon {
+        display: none;
+      }
+      &:hover {
+        cursor: pointer;
+        background-color: $hoverItem;
+        .dragIcon {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .applyButton {
+    display: flex;
+    padding: 9px 16px;
+    box-shadow: inset 0px 1px 0px #eaecf0;
+  }
+}

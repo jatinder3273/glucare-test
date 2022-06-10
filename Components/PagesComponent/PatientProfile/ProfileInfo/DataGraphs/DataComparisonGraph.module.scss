@@ -1,0 +1,93 @@
+@import "../../../../../scss/var";
+.dataComparison {
+  height: 100%;
+  padding: 1rem;
+}
+.dataComparison_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.dataComparison_btnWrap {
+  .radioSelectBtn {
+    margin-right: 12px;
+    label {
+      border: 1px solid $iconColor;
+      cursor: pointer;
+      color: $textColor;
+      padding: 6px 8px;
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.5;
+      min-width: 66px;
+      min-height: 40px;
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    input {
+      display: none;
+      &:checked {
+        & ~ label {
+          border-color: $secondary400;
+          background-color: $secondary400;
+          color: #fff;
+          position: relative;
+          &::after {
+            content: "";
+            margin-left: 8px;
+            background-image: url(../../../../../assets/icons/checkIconWhite.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 12px;
+            height: 9px;
+          }
+        }
+      }
+    }
+    &:first-child {
+      label {
+        min-width: 109px;
+      }
+    }
+  }
+}
+.dataComparison_date {
+  span {
+    color: $textColor;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+}
+.switchGraphBtn {
+  margin-bottom: 10px;
+  label {
+    font-size: 12px;
+    color: $textColor;
+  }
+}
+.labGraph_single {
+  padding: 1rem 0;
+  color: $textColor;
+}
+.lineDetail {
+  display: flex;
+  align-items: center;
+  .lineDetail_single {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 12px;
+    font-size: 12px;
+    span {
+      margin-right: 4px;
+      background-color: $primary;
+      height: 6px;
+      width: 6px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+  }
+}

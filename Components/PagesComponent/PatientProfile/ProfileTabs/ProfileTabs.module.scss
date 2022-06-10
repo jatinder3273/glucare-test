@@ -1,0 +1,33 @@
+@import "../../../../scss/var";
+.ProfileTabs {
+  margin-bottom: 1rem;
+}
+.ProfileTabs_inner {
+  overflow-y: auto;
+  padding-bottom: 0.5rem;
+  ul {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    box-shadow: inset 0px -1px 0px #eaecf0;
+    li {
+      @include min(1600) {
+        font-size: 1rem;
+      }
+      color: $primary;
+      font-size: 14px;
+      border-bottom: 3px solid transparent;
+      padding: 12px 14px;
+      margin: 0 5px 0;
+      line-height: 1;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: 0.15s linear;
+      &.active {
+        border-color: $secondary400;
+        color: $secondary400;
+      }
+    }
+  }
+}

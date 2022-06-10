@@ -1,0 +1,72 @@
+@import "../../../../scss/var";
+.historyTables_head {
+  display: flex;
+  margin-bottom: 0.5rem;
+  & .historyTables_column {
+    padding: 1rem 0.75rem;
+    color: $textSecondary;
+    font-size: 14px;
+    box-shadow: inset 0px -1px 0px $borderGrey;
+    &:nth-child(1) {
+      flex-basis: 44%;
+    }
+    &:nth-child(2) {
+      flex-basis: 56%;
+      b {
+        display: block;
+        font-weight: inherit;
+        color: $iconColor;
+      }
+    }
+  }
+}
+.historyTables_day {
+  color: $textPrimary;
+}
+.historyTables_date {
+  background-color: #f2fcfd;
+  padding: 0.45rem 0.75rem;
+  line-height: 1.2;
+  font-size: 14px;
+}
+.historyTables_time {
+  display: flex;
+  & .historyTables_column {
+    padding: 1rem 0.75rem;
+    &:nth-child(1) {
+      flex-basis: 44%;
+    }
+    &:nth-child(2) {
+      flex-basis: 56%;
+      font-weight: 600;
+    }
+  }
+}
+.historyTablesFood_day {
+  margin-bottom: 1.5rem;
+  & .historyTables_date {
+    margin-bottom: 1rem;
+  }
+}
+.historyTablesFood_time {
+  margin-bottom: 1rem;
+  span {
+    font-size: 12px;
+    color: $textSecondary;
+  }
+  p {
+    color: $textPrimary;
+    font-weight: 300;
+  }
+  & .foodImagesWrap {
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    & .image {
+      margin-right: 0.5rem;
+    }
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

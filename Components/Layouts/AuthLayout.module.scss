@@ -1,0 +1,34 @@
+@import "../../scss/var";
+.authLayoutWrap {
+  @include min(768) {
+    height: 100vh;
+  }
+}
+.authLayoutBg {
+  @include min(768) {
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-image: url(../../assets/bgSignup.svg);
+    display: flex;
+    align-items: flex-end;
+    padding: 0 calc(5vw + 2rem);
+    & .authLayoutLogo {
+      transform: translateY(-60%);
+      max-width: 25vw;
+    }
+  }
+  @include max(767) {
+    display: none;
+  }
+}
+
+.authLayoutFormWrap {
+  @include min(768) {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,25 @@
+@import "../../../../scss/var";
+.SearchWrap {
+  display: flex;
+  padding: 0 20px 20px;
+  @include max(991) {
+    flex-wrap: wrap;
+    :global(.searchBar) {
+      margin-bottom: 10px;
+    }
+  }
+  .searchButtons {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    @include max(991) {
+      :global(.searchBar) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  // .addBtn {
+  //   margin-right: 20px;
+  // }
+}

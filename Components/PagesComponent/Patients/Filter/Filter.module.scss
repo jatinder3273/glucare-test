@@ -1,0 +1,146 @@
+@import "../../../../scss/var";
+
+.saveFilterWrap {
+  border-bottom: 1px solid #eaecf0;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+
+  .colorWrap {
+    margin-top: 20px;
+  }
+
+  .radio {
+    display: flex;
+    gap: 16px;
+
+    .radioCheck {
+      label {
+        display: flex;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border-width: 0px !important;
+        .checkIcon {
+          display: none;
+        }
+      }
+      input {
+        display: none;
+        &:checked {
+          & ~ label {
+            border-width: 1px !important;
+            .checkIcon {
+              display: flex;
+              align-items: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.buttonWrap {
+  border-top: 1px solid #eaecf0;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+  position: sticky;
+  bottom: 0;
+  z-index: 9;
+  background-color: #fff;
+  .cancelButton {
+    margin-left: 20px;
+  }
+}
+
+.contentWrap {
+  padding-left: 1px;
+
+  .contentHeadingWrap {
+    display: flex;
+    div {
+      font-size: 12px;
+      font-weight: 500;
+      color: $headingColor;
+    }
+    :nth-child(1) {
+      width: 240px;
+    }
+    :nth-child(2) {
+      margin-left: 24px;
+      width: 340px;
+    }
+  }
+
+  .selectCriteriaWrap {
+    max-width: 240px;
+    margin-bottom: 24px;
+  }
+
+  .criteriaWrap {
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    :global(.react-datepicker-popper) {
+      z-index: 9;
+    }
+    .selectWrap {
+      width: 240px;
+    }
+    .valueWrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-grow: 1;
+      .type1 {
+        width: 340px;
+      }
+      .type2 {
+        display: flex;
+        gap: 8px;
+
+        .type2Input {
+          input {
+            padding: 8px 8px;
+          }
+        }
+      }
+      .type3 {
+        width: 340px;
+      }
+      .type4 {
+        display: flex;
+        .fromInputWrap {
+          position: relative;
+
+          .searchIcon {
+            position: absolute;
+            z-index: 1;
+            color: $iconColor;
+            top: 8px;
+            left: 5px;
+          }
+          .fromInput {
+            padding-left: 25px;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            width: 170px;
+          }
+        }
+        .toInput {
+          padding-left: 10px;
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+          border-left: 0px;
+          width: 170px;
+        }
+      }
+    }
+    .closeWrap {
+      cursor: pointer;
+    }
+  }
+}

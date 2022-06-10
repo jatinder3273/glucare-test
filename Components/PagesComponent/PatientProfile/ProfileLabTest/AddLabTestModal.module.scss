@@ -1,0 +1,83 @@
+@import "../../../../scss/var";
+.addLabTestBody {
+  // margin-top: 1.5rem;
+}
+// .diagnosisWrap {
+//   //   color: red;
+// }
+.idCard {
+  :global(.sc-bczRLJ) {
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    border: none;
+    z-index: 1;
+    max-width: 395px;
+  }
+  :global(.sc-dkzDqf) {
+    span {
+      display: none;
+    }
+  }
+  input {
+    display: none;
+  }
+  svg {
+    display: none;
+  }
+  .cardWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed #ccd1db;
+    border-radius: 8px;
+    height: 80px;
+    overflow: hidden;
+    cursor: pointer;
+
+    .pickImgWrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .cardTxt1 {
+        color: #acafbf;
+        font-size: 12px;
+        font-weight: 400;
+      }
+      .cardPickImg {
+        margin: 10px 0px 0;
+      }
+      .cardTxt2 {
+        font-size: 12px;
+        font-weight: 500;
+        span {
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+.uploadedFile {
+  height: 80px;
+}
+
+.cardPdf_content {
+  max-width: calc(100% - 42px);
+  line-height: 1;
+  h6 {
+    color: $textPrimary;
+    font-size: 12px;
+    margin-bottom: 2px;
+    line-height: 1;
+  }
+  span {
+    color: $textSecondary;
+    font-size: 10px;
+    line-height: 1;
+  }
+}
+.nameTxt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

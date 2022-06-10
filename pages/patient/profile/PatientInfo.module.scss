@@ -1,0 +1,311 @@
+@import "../../../scss/var";
+
+.profileInfoWrapper {
+  max-width: 1620px;
+  margin: auto;
+}
+.personalProfileDetail {
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+  & .profileOptions_dropdown {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    button {
+      padding: 4px 2px;
+      transform: translate(-5px, -5px) rotate(90deg);
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+.personal_info {
+  margin-bottom: 1rem;
+  & .image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    line-height: 0;
+    display: block;
+    margin: auto;
+    overflow: hidden;
+  }
+  h4 {
+    font-weight: 400;
+    color: $headingColor;
+    margin: 8px 0 0;
+    text-transform: capitalize;
+  }
+  & .personalProfileDetail_tag {
+    display: inline-block;
+    padding: 6px 8px;
+    margin: 6px 0 3px;
+    background-color: #e7e9f5;
+    border-radius: 4px;
+    color: $textPrimary;
+    line-height: 1;
+    font-size: 14px;
+  }
+  & .personalProfileDetail_id {
+    display: block;
+    color: $textSecondary;
+    font-size: 14px;
+  }
+}
+.profileDetailCardHeading {
+  display: flex;
+  align-items: center;
+  & .icn {
+    margin-left: 12px;
+    color: $iconColor;
+    cursor: pointer;
+    line-height: 1;
+    svg {
+      width: 17px;
+      height: 17px;
+    }
+  }
+}
+.profileDetail_singleField {
+  text-align: left;
+  margin-bottom: 0.5rem;
+  label {
+    color: $textSecondary;
+    font-size: 12px;
+  }
+  p {
+    font-size: 14px;
+    color: $textPrimary;
+  }
+  &:last-child {
+    margin: 0;
+  }
+  & .personalProfileDetail_tag {
+    display: inline-block;
+    padding: 6px 8px;
+    margin: 6px 0 3px 4px;
+    background-color: #e7e9f5;
+    border-radius: 4px;
+    color: $textPrimary;
+    line-height: 1;
+    font-size: 14px;
+  }
+}
+.personalMedicalInfo {
+  padding: 1rem;
+  & .profileDetail_singleField {
+    margin-bottom: 1rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+.profileDetail_doctor {
+  display: flex;
+  padding-top: 4px;
+  // align-items: center;
+  & .image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    line-height: 0;
+  }
+  & .doctorName {
+    margin-left: 12px;
+    h6 {
+      color: $textPrimary;
+      line-height: 1;
+      font-size: 14px;
+      font-weight: 400;
+    }
+    span {
+      color: $textSecondary;
+      font-size: 12px;
+    }
+  }
+}
+.profileDetail_clinics {
+  display: flex;
+  margin: 0.5rem 0 0.75rem;
+  & .icon {
+    svg {
+      color: $iconColor;
+      width: 13px;
+      height: 15px;
+    }
+  }
+  & .clinicAdress {
+    margin-left: 12px;
+    h6 {
+      line-height: 1.5;
+    }
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+// ====== Diaganosis css ======================
+.profileMoodCard {
+  padding: 1.25rem 1.25rem;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  background-color: $bgPrimary100;
+  & .cardIcon {
+    margin-right: 1rem;
+    color: $iconColor;
+    svg {
+      height: 20px;
+      max-width: 20px;
+    }
+  }
+  p {
+    font-weight: 400;
+    color: $textColor;
+    line-height: 1.4;
+    font-size: 12px;
+    b {
+      color: $headingColor;
+      font-weight: 500;
+    }
+  }
+}
+.diagnosisCard {
+  padding: 1rem 1.25rem;
+  margin-bottom: 12px;
+  display: flex;
+  & .cardIcon {
+    margin-right: 1rem;
+    color: $iconColor;
+    svg {
+      height: 20px;
+      max-width: 20px;
+    }
+  }
+  & .card_content {
+    flex-grow: 1;
+  }
+  & .card_tittle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+    h5 {
+      color: $textColor;
+      font-size: 1rem;
+    }
+    & .card_schedule {
+      color: $iconColor;
+      cursor: pointer;
+      svg {
+        height: 20px;
+        max-width: 20px;
+      }
+    }
+    & .card_viewBtn {
+      color: $primary;
+      padding: 3px;
+      display: inline-block;
+      font-size: 14px;
+      cursor: pointer;
+    }
+  }
+  & .cardText {
+    margin-bottom: 8px;
+    p {
+      font-size: 14px;
+      color: $textPrimary;
+    }
+    span {
+      display: block;
+      color: $textSecondary;
+      font-size: 12px;
+      margin-bottom: 4px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  & .cardImages {
+    display: flex;
+    margin-top: 12px;
+    & .image {
+      margin-right: 8px;
+      width: 64px;
+      img {
+        border-radius: 8px;
+      }
+    }
+  }
+  & .cardUnit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h6 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: $headingColor;
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 4px;
+      span {
+        color: $iconColor;
+        font-size: 14px;
+      }
+    }
+
+    & .unitChanges {
+      color: $primary;
+      background-color: $secondary100;
+      padding: 6px 12px;
+      border-radius: 14px;
+      margin-left: 5px;
+      font-size: 12px;
+      display: inline-flex;
+      align-items: center;
+      font-weight: 400;
+      white-space: nowrap;
+      display: flex;
+      gap: 7px;
+    }
+  }
+  @include max(1240) {
+    padding: 0.8rem 1rem;
+  }
+}
+// ====== Diaganosis css end ======================
+
+// ====== Accordian start ======================
+
+.accrodionWrap {
+  :global(.accordion-item) {
+    border: none;
+    :global(.accordion-header) {
+      :global(.accordion-button) {
+        padding: 16px 3px;
+        font-size: 18px;
+        font-weight: 600;
+        color: $textColor;
+        background-color: transparent;
+        box-shadow: none;
+        &::after {
+          color: $textColor;
+          background-image: url("../../../assets/icons/accordionIcon.svg");
+          background-size: 1rem;
+          width: 16px;
+          height: 12px;
+        }
+      }
+    }
+    :global(.accordion-body) {
+      padding: 10px 3px;
+    }
+  }
+}
+
+// ====== Accordian end ======================

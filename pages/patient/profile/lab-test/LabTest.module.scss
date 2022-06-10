@@ -1,0 +1,64 @@
+@import "../../../../scss/var";
+
+.labTest_page {
+  max-width: 1440px;
+  margin: auto;
+}
+
+.labTest_cardWrapper {
+  margin-top: 3.2rem;
+}
+.labTest_card {
+  padding: 1.125rem 1.25rem;
+  cursor: pointer;
+  display: flex;
+  margin-bottom: 0.5rem;
+  .cardIcon {
+    margin-right: 1.25rem;
+    color: $secondary600;
+    svg {
+      width: 24px;
+      height: auto;
+      max-height: 26px;
+    }
+  }
+  .cardContent {
+    flex-grow: 1;
+  }
+  .cardReadings {
+    font-size: 14px;
+    color: $textPrimary;
+    margin-top: 1.25rem;
+    display: table;
+    width: 100%;
+  }
+  .cardReading_single {
+    display: flex;
+    display: table-row;
+    .cardReadings_type,
+    .cardReadings_value {
+      display: table-cell;
+      padding: 0 0 10px;
+      vertical-align: middle;
+    }
+    .cardReadings_value {
+      padding-left: 1rem;
+    }
+    &:last-child {
+      .cardReadings_type,
+      .cardReadings_value {
+        padding-bottom: 0;
+      }
+    }
+  }
+  .updateDate {
+    color: $textSecondary;
+    font-size: 14px;
+    margin-top: 1rem;
+  }
+}
+
+.ceterData {
+  text-align: center;
+  margin-top: 4rem;
+}

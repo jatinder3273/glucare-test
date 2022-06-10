@@ -1,0 +1,2 @@
+export const GET_USER_DETAIL = "GET_USER_DETAIL";
+export const GET_JOB_TITLE_LIST = "GET_JOB_TITLE_LIST";

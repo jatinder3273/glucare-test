@@ -1,0 +1,178 @@
+@import "../../../../scss/var";
+
+.labTest_page {
+  max-width: 1440px;
+  margin: auto;
+}
+
+.filter_dropdown {
+  button {
+    &::after {
+      display: none;
+    }
+  }
+}
+.filter_dropMenu {
+  left: -50% !important;
+  top: 8px !important;
+}
+
+.labSearch {
+  display: flex;
+  justify-content: flex-end;
+  .labSearch_btnWrap {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+.labTestCard {
+  padding: 1rem;
+  margin: 1.5rem 0;
+  @include min(768) {
+    padding: 1.5rem;
+  }
+  & .cardMenu_icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: $iconColor;
+    cursor: pointer;
+  }
+  :global(.cardPdf) {
+    width: 200px;
+  }
+}
+.labTestCard_full {
+  position: relative;
+  padding-right: 1rem;
+  @include min(992) {
+    padding-right: 1.5rem;
+    display: flex;
+  }
+  .card_testDetail {
+    list-style: none;
+    padding: 0;
+    li {
+      font-size: 14px;
+      color: $textPrimary;
+      padding: 8px 0;
+      &:first-child {
+        // padding-top: 0;
+      }
+      &:last-child {
+        padding-bottom: 0;
+      }
+      @include min(992) {
+        margin: 1rem 0;
+      }
+      h6 {
+        font-size: 12px;
+        color: $headingColor;
+      }
+      &:first-child {
+        margin-top: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .card_testReading {
+    flex-grow: 1;
+    @include min(992) {
+      padding: 0 0 0 2.5rem;
+    }
+    table {
+      width: 100%;
+      font-size: 14px;
+      @include max(767) {
+        font-size: 12px;
+      }
+      thead {
+        th {
+          padding: 10px 12px;
+          color: $textSecondary;
+          font-weight: 400;
+          box-shadow: inset 0px -1px 0px #eaecf0;
+        }
+      }
+      tbody {
+        tr {
+          td {
+            padding: 10px 8px;
+            @include min(768) {
+              padding: 18px 14px;
+            }
+            font-weight: 400;
+          }
+          &:nth-last-of-type(even) > * {
+            background-color: #f8f8f8;
+          }
+        }
+      }
+    }
+  }
+}
+.labTestCard_half {
+  position: relative;
+  padding-right: 1.5rem;
+  @include min(1200) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    @include min(768) {
+      display: flex;
+      justify-content: space-between;
+    }
+    li {
+      font-size: 14px;
+      color: $textPrimary;
+      margin: 0 0 1.3rem;
+      @include min(768) {
+        margin: 0;
+      }
+      span {
+        white-space: nowrap;
+      }
+      h6 {
+        font-size: 12px;
+        color: $headingColor;
+      }
+    }
+    &.halfCardDetail {
+      margin-top: 1.3rem;
+      @include min(1200) {
+        margin-top: 0;
+      }
+      li {
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+      @include min(1200) {
+        padding-left: 2.5rem;
+        flex-grow: 1;
+        li {
+          padding: 0 1.5rem;
+        }
+      }
+    }
+  }
+  & .halfCard_pdf {
+    @include min(1200) {
+      padding-left: 2.5rem;
+    }
+  }
+  & .shareCheckbox {
+    margin-top: 0.4rem;
+  }
+}
+
+.ceterData {
+  text-align: center;
+  margin-top: 4rem;
+}

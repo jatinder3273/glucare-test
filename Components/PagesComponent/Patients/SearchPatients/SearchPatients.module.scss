@@ -1,0 +1,145 @@
+@import "../../../../scss/var";
+.SearchPatientsWrap {
+  padding: 0 20px 20px;
+  .filterButtonWrap {
+    display: flex;
+    justify-content: space-between;
+
+    .left {
+      display: flex;
+    }
+    .filterBtn {
+      margin-left: 20px;
+    }
+
+    .setting_dropdown {
+      display: inline-block;
+      button {
+        // padding: 0;
+        &::after {
+          display: none;
+        }
+      }
+    }
+    .settingMenu {
+      left: -80% !important;
+      top: 4px !important;
+    }
+  }
+  .savedFilterWrap {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+
+    .savedTxt {
+      font-size: 14px;
+      font-weight: 400;
+      color: $textPrimary;
+      white-space: nowrap;
+      // overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .filtersListWrap {
+      margin-left: 2px;
+      display: flex;
+      .radioCheck {
+        margin-left: 8px;
+        label {
+          padding-right: 8px;
+          color: $textPrimary;
+          border-radius: 4px;
+          display: flex;
+          justify-content: center;
+          .checkIcon {
+            margin-left: 12px;
+            visibility: hidden;
+            display: flex;
+            align-items: center;
+          }
+          .filterTxt {
+            color: $headingColor;
+            font-size: 14px;
+            font-weight: 400;
+            padding: 4px 0px 4px 12px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+
+          .headerProfile_dropdown {
+            display: flex;
+            align-items: center;
+            margin-left: 2px;
+            button {
+              padding: 0;
+              transform: rotate(90deg);
+              &::after {
+                display: none;
+              }
+              &:focus {
+                box-shadow: none;
+              }
+              .optionIcon {
+                cursor: pointer;
+                color: $iconColor;
+                svg {
+                  height: 3px;
+                }
+              }
+            }
+          }
+
+          .headerProfile_dropBtn {
+            display: inline-block;
+            text-align: left;
+            padding-right: 1.8rem;
+            line-height: 1;
+            h6 {
+              font-size: 14px;
+              font-weight: 400;
+              color: $headingColor;
+              margin-bottom: 3px;
+            }
+            span {
+              font-size: 12px;
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              top: 50%;
+              right: 3px;
+              transform: translateY(-100%) rotate(45deg);
+              width: 10px;
+              height: 10px;
+              border-right: 2px solid $textSecondary;
+              border-bottom: 2px solid $textSecondary;
+            }
+          }
+
+          .dropDown {
+            min-width: 120px;
+            top: 10px !important;
+            right: -40px !important;
+          }
+
+          .dropDownImage {
+            height: 20px;
+            width: 20px;
+            margin-right: 0.8rem;
+          }
+        }
+        input {
+          display: none;
+          &:checked {
+            & ~ label {
+              .checkIcon {
+                visibility: visible;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

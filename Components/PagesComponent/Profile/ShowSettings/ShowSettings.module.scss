@@ -1,0 +1,89 @@
+@import "../../../../scss/var";
+
+.mainWrap {
+  min-height: 600px;
+  padding: 24px 0;
+  :global(.nav) {
+    display: block;
+  }
+
+  .switchWrap {
+    max-width: 200px;
+    .switchButton {
+      border: none;
+      background-color: transparent;
+      color: $primary;
+      padding: 12px 15px;
+      border-radius: 8px;
+      transition: 0.15s linear;
+      width: 100%;
+      text-align: left;
+
+      .switchTxt {
+        font-size: 14px;
+        font-weight: 500;
+        color: $primary;
+        margin-left: 14px;
+      }
+
+      &:hover {
+        background-color: #e1f8fb86;
+        cursor: pointer;
+      }
+      &:focus {
+        background-color: $secondary100;
+      }
+      &:global(.active) {
+        background-color: $secondary100;
+      }
+    }
+  }
+}
+
+.notificationContent {
+  padding: 26px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+
+  .innerContent {
+    display: flex;
+    justify-content: space-between;
+
+    .innerTxt {
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .innerCheckboxes {
+      display: flex;
+      gap: 43px;
+
+      label {
+        font-size: 14px;
+        font-weight: 400;
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+.cancelButton {
+  margin-left: 16px;
+}
+
+.privacyWrap {
+  max-width: 395px;
+}
+
+.privacyContent {
+  padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.ceterData {
+  text-align: center;
+  margin-top: 4rem;
+}

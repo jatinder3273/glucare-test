@@ -1,0 +1,27 @@
+$primary: #18338c;
+$bgPrimary100: #e7e9f5;
+$secondary: #36aec9;
+$secondary100: #e1f8fb;
+$secondary200: #8cdbe8;
+$secondary400: #41c3d8;
+$secondary600: #1caec9;
+$btnHover: #2b47a4;
+$headingColor: #102360;
+$textColor: #414858;
+$textPrimary: #1b1d22;
+$textSecondary: #6c7893;
+$iconColor: #a5adc0;
+$hoverItem: #f0fbfd;
+$borderGrey: #eaecf0;
+$greenColor: #21b089;
+$orangeColor: #fe5500;
+@mixin min($value) {
+  @media screen and (min-width: ($value + "px")) {
+    @content;
+  }
+}
+@mixin max($value) {
+  @media screen and (max-width: ($value + "px")) {
+    @content;
+  }
+}

@@ -1,0 +1,11 @@
+@import "../../../scss/var";
+.calendarModalWrapper {
+  & .dateRangeValue {
+    margin: 5px 0;
+    font-size: 14px;
+    color: $textSecondary;
+  }
+}
+.dateRangePicker {
+  margin: 1.5rem 0 0;
+}

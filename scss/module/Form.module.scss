@@ -1,0 +1,95 @@
+@import "../var";
+.formWrapper {
+  width: 100%;
+  max-width: 480px;
+  padding: 2.5rem;
+  h4 {
+    color: $headingColor;
+    margin: 0 0 0.7rem;
+  }
+  p {
+    color: $textSecondary;
+    font-weight: 300;
+  }
+}
+
+.formFields {
+  & .labelWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+    label {
+      margin-bottom: 0;
+    }
+    span {
+      color: $primary;
+      cursor: pointer;
+      font-size: 12px;
+    }
+  }
+  label {
+    font-size: 12px;
+    margin-bottom: 4px;
+    color: #6c7893;
+    font-weight: 400;
+  }
+}
+.passwordEye {
+  position: relative;
+  input {
+    padding-right: 36px;
+  }
+  & .passwordEyeImg {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 22px;
+    line-height: 0;
+    img {
+      width: 100% !important;
+    }
+  }
+}
+.rememberField {
+  margin: 1.5rem 0;
+  label {
+    font-size: 14px;
+    font-weight: 400;
+    color: $textPrimary;
+    padding-left: 4px;
+  }
+  input {
+    height: 1.1em;
+    width: 1.1em;
+  }
+}
+.form_btns {
+  margin-top: 1.5rem;
+}
+.hidePassword {
+  color: red;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    height: 1px;
+    background-color: #a5adc0;
+    width: 25px;
+  }
+}
+.counterTag {
+  color: $primary;
+  background-color: $secondary100;
+  padding: 7px 8px;
+  border-radius: 8px;
+  margin-left: 5px;
+}
+.optVerificationTest {
+  p {
+    margin: 1.9rem 0;
+  }
+}

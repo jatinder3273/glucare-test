@@ -1,0 +1,149 @@
+@import ".././../../scss/var";
+
+.mainWrap {
+  width: 460px;
+
+  :global(.Toastify__toast-container) {
+    :global(.Toastify__toast) {
+      display: flex;
+      align-items: center;
+      padding: 0 20px 0 10px;
+      border-top: 2px solid $greenColor;
+      border-bottom: 2px solid $greenColor;
+      border-left: 8px solid $greenColor;
+      border-right: 2px solid $greenColor;
+      svg {
+        height: 14px;
+        width: 14px;
+      }
+
+      :global(.Toastify__toast-icon) {
+        svg {
+          height: 20px;
+          width: 20px;
+        }
+        + div {
+          font-size: 14px;
+          font-weight: 400;
+          color: $textPrimary;
+        }
+      }
+    }
+  }
+}
+
+.headWrap {
+  padding: 9px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  span {
+    color: $headingColor;
+    font-size: 24px;
+    font-weight: 500;
+  }
+}
+
+.markAllTxt {
+  color: $primary;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0 24px;
+  cursor: pointer;
+}
+
+.subHeading {
+  color: $secondary600;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 0 24px;
+  margin: 12px 0;
+}
+
+.newWrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.earlierWrap {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+}
+
+.notification {
+  display: flex;
+  padding: 24px 24px 19px;
+  background-color: $hoverItem;
+  box-shadow: inset 0px -1.5px 0px #eaecf0;
+  gap: 12px;
+
+  .icon {
+    background-color: $secondary200;
+    color: white;
+    height: 30px;
+    width: 30px;
+    padding: 4px 6px;
+    border-radius: 50%;
+
+    svg {
+      height: 17px;
+      width: 17px;
+    }
+  }
+
+  .contentHeading {
+    font-size: 14px;
+    font-weight: 500;
+    color: $textPrimary;
+  }
+
+  .contentContent {
+    padding: 6px 20px 6px 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: $textPrimary;
+
+    .contentName {
+      font-weight: 500;
+      color: $primary;
+    }
+  }
+
+  .contentDate {
+    font-weight: 400;
+    font-size: 12px;
+    color: $textSecondary;
+  }
+
+  &.changeTheme {
+    background-color: transparent;
+    .icon {
+      background-color: $secondary100;
+      color: $primary;
+    }
+  }
+}
+
+.listWrap {
+  height: calc(100vh - 12rem);
+  overflow-y: auto;
+}
+
+.ceterData {
+  text-align: center;
+}
+.ceterData2 {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.loadMore {
+  color: $secondary600;
+  font-size: 15px;
+  font-weight: 400;
+  text-align: end;
+  cursor: pointer;
+  padding-bottom: 10px;
+}

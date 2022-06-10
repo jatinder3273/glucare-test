@@ -1,0 +1,80 @@
+@import "../../../../scss/var";
+.ProfileNotesPage {
+  @include min(991) {
+    max-width: 660px;
+    margin: auto;
+  }
+}
+.notesWraper {
+}
+.notesDayBox {
+  margin-top: 2rem;
+  h6 {
+    color: $primary;
+  }
+}
+.singleNote {
+  margin-top: 1rem;
+  display: flex;
+  padding: 1rem 2.5rem 1rem 1rem;
+  & .icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 0.5rem;
+  }
+  & .showMoreBtn {
+    text-align: right;
+    margin-bottom: -0.5rem;
+    line-height: 1.1;
+    color: $primary;
+    font-size: 14px;
+    cursor: pointer;
+  }
+}
+.notesContent {
+  margin-top: 4px;
+  h5 {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.14;
+    margin-bottom: 1rem;
+    color: $headingColor;
+  }
+  p {
+    font-size: 14px;
+    color: $textPrimary;
+  }
+  ul {
+    font-size: 14px;
+    li {
+      margin: 1px 0;
+      &::marker {
+        color: $textColor;
+      }
+    }
+  }
+}
+.addnotesBox {
+  margin-top: 1rem;
+  padding: 1rem 1.5rem;
+}
+.notesSearch {
+  @include min(768) {
+    display: flex;
+  }
+  :global(.searchBar) {
+    flex-grow: 1;
+    input {
+      width: 100%;
+    }
+    @include max(767) {
+      width: 100%;
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.ceterData {
+  text-align: center;
+  margin-top: 4rem;
+}

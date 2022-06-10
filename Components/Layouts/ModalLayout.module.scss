@@ -1,0 +1,53 @@
+@import "../../scss/var";
+.modalMain {
+  :global(.modal-dialog) {
+    max-width: 592px;
+  }
+  :global(.modal-content) {
+    border: none;
+    max-height: 85vh;
+    overflow-y: auto;
+  }
+  :global(.modal-header) {
+    border: none;
+    padding: 2rem 2.5rem 1rem;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    // box-shadow: 0 1px 4px -2px rgba(0, 0, 0, 0.15);
+    button {
+      font-size: 14px;
+      padding: 4px;
+      color: $textSecondary;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+  :global(.modal-body) {
+    padding: 0 2.5rem;
+  }
+  :global(.modal-footer) {
+    border: none;
+    padding: 0;
+  }
+  &.calendarPopup {
+    :global(.modal-dialog) {
+      max-width: 780px;
+      width: 90%;
+    }
+  }
+  &.profilePopup {
+    :global(.modal-dialog) {
+      max-width: 900px;
+      width: 90%;
+    }
+  }
+  &.filterPopup {
+    :global(.modal-dialog) {
+      max-width: 732px;
+      width: 90%;
+    }
+  }
+}

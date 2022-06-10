@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+html {
+  font-size: 16px;
+  @media (max-width: 1200px) {
+    font-size: 14px;
+  }
+}
+body {
+  //   font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+img {
+  max-width: 100%;
+}
+ul {
+  margin: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: clamp(30px, calc(1.05rem + 3vw), 48px);
+  color: $headingColor;
+}
+h2 {
+  font-size: clamp(20px, 3vw, 36px);
+  color: $headingColor;
+}
+h3 {
+  font-size: clamp(24px, 2.7vw, 28px);
+  color: $headingColor;
+}
+h4 {
+  font-size: clamp(20px, 2.2vw, 24px);
+  color: $headingColor;
+}
+h5 {
+  font-size: clamp(16px, 1.9vw, 18px);
+  color: $headingColor;
+}
+h6 {
+  font-size: 14px;
+  color: $textPrimary;
+  font-weight: 400;
+}
+label.form-label {
+  margin-bottom: 0px;
+  font-weight: 400;
+  font-size: 12px;
+  color: #6c7893;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input {
+  &[type="text"],
+  &[type="email"],
+  &[type="number"],
+  &[type="date"],
+  &[type="password"] {
+    border: 1px solid #ccd1db;
+    border-radius: 8px;
+    font-size: 14px;
+    color: $textPrimary;
+    height: 40px;
+    &:focus {
+      box-shadow: none;
+      outline: none;
+      border-color: $secondary600;
+    }
+    &::placeholder {
+      font-size: 14px;
+      color: $iconColor;
+    }
+  }
+}
+.form-check-input {
+  &:focus {
+    background-image: inherit;
+    box-shadow: none;
+    border-color: none;
+  }
+  &:checked {
+    background-color: $secondary;
+    border-color: $secondary;
+  }
+}
+textarea.form-control {
+  resize: none;
+  border: 1px solid #ccd1db;
+  border-radius: 8px;
+  color: $textPrimary;
+  padding: 0.5rem 1rem;
+  &::placeholder {
+    font-size: 14px;
+    color: $iconColor;
+  }
+  &:focus {
+    box-shadow: none;
+    outline: none;
+    border-color: $secondary600;
+  }
+}
+ul.list {
+  color: $textPrimary;
+  padding-left: 1.3rem;
+}
+.text_small {
+  font-size: 14px;
+}
+
+button.btn {
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.15s linear;
+  line-height: 1.15;
+  .btnIcon {
+    margin-right: 11px;
+  }
+  &:focus {
+    box-shadow: none;
+  }
+  &.filled {
+    background-color: $primary;
+    color: #fff;
+    &:hover {
+      background-color: #2b47a4;
+    }
+    &:active {
+      background-color: #5369b9;
+    }
+    &.disabled {
+      background-color: #a5adc0;
+    }
+  }
+  &.outline {
+    background-color: transparent;
+    color: $primary;
+    border-color: $primary;
+    &:hover,
+    &:focus {
+      background-color: #f0fbfd;
+      border-color: $btnHover;
+      color: #2b47a4;
+    }
+    &:active {
+      background-color: #f0fbfd;
+      border-color: #5369b9;
+      color: #5369b9;
+    }
+    &.disabled {
+      background-color: transparent;
+      border-color: #a5adc0;
+      color: #a5adc0;
+    }
+    &.iconBtn {
+      padding: 10px 12px;
+      line-height: 1;
+      svg {
+        width: 16px;
+        height: auto;
+      }
+    }
+  }
+
+  &.deleteButton {
+    background-color: transparent;
+    color: $orangeColor;
+    border-color: $orangeColor;
+    &:hover,
+    &:focus {
+      background-color: #fb681e1a;
+    }
+    &:active {
+      background-color: #fb681e1a;
+    }
+    &.disabled {
+      background-color: transparent;
+      border-color: #a5adc0;
+      color: #a5adc0;
+    }
+    &.iconBtn {
+      padding: 10px 12px;
+      line-height: 1;
+      svg {
+        width: 16px;
+        height: auto;
+      }
+    }
+  }
+}
+.btnToggleGroup {
+  border: 1px solid #ccd1db;
+  border-radius: 8px;
+  padding: 1px;
+  button {
+    padding: 10px 14px;
+  }
+  button.show {
+    background-color: $secondary600;
+    color: #fff;
+  }
+}
+.theme_border {
+  border: 1px solid $borderGrey;
+  border-radius: 8px;
+}
+
+.theme_divider {
+  background-color: #eaecf0;
+  height: 1px;
+}

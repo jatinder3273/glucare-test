@@ -1,0 +1,137 @@
+@import "../../../../scss/var";
+
+.patientImgWrap {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  & .patientImg {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+    line-height: 0;
+    display: block;
+    overflow: hidden;
+    & img {
+      object-fit: cover;
+    }
+  }
+  .patientName {
+    color: $primary;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .patientNumber {
+    color: #818496;
+    font-weight: 300;
+  }
+}
+.weightWrap {
+  display: flex;
+  gap: 33px;
+  .changeInWeightWrap {
+    display: flex;
+    align-items: center;
+    gap: 7.5px;
+    & .arrowDown {
+      transform: rotate(180deg);
+    }
+  }
+}
+.statusText {
+  margin-left: 8px;
+}
+
+.option {
+  cursor: pointer;
+}
+
+.headerProfile_dropdown {
+  button {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.reasignWrap {
+  padding: 24px;
+}
+
+.primaryDoctorWrap {
+  .primaryDoctor {
+    span {
+      display: none;
+    }
+    & .menuItemWrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      & .menuItem_detail {
+        padding-right: 23px;
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        p {
+          color: $textPrimary;
+        }
+      }
+      & .menuItem_check {
+        display: none;
+      }
+      & .menuItem_close {
+        display: none;
+      }
+    }
+    :global(.filter__control) {
+      border-radius: 8px;
+    }
+    :global(.filter__placeholder) {
+      font-weight: 400;
+      color: #a5adc0;
+    }
+    :global(.filter__option--is-selected) {
+      background-color: #f0fbfd;
+      & .menuItem_detail {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        p {
+          margin-left: 0 !important;
+        }
+      }
+      & .menuItem_check {
+        display: block;
+        color: $secondary600;
+      }
+    }
+    :global(.filter__single-value) {
+      width: fit-content;
+      background-color: #e1f8fb;
+      border-radius: 40px;
+      padding: 3px 15px;
+      & .menuItemWrap {
+      }
+      & .menuItem_detail {
+        img {
+          height: 30px;
+          width: 30px;
+        }
+      }
+      & .menuItem_close {
+        display: block;
+        color: #a5adc0;
+        z-index: 1;
+        :hover {
+          cursor: pointer;
+        }
+      }
+    }
+    :global(.filter__input-container) {
+      margin: 0px;
+      padding: 0px;
+    }
+  }
+}

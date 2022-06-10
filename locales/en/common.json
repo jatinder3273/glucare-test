@@ -1,0 +1,26 @@
+{
+  "title": "Welcome to {{siteName}}",
+  "job_title": "Job title",
+  "select_job_title": "Select job title",
+  "add_user": "Add User",
+  "cancel": "Cancel",
+  "personal_info": "Personal info",
+  "professional_info": "Professional info",
+  "first_name": "First name",
+  "last_name": "Last name",
+  "date_of_birth": "Date of birth",
+  "select_gender": "Select gender",
+  "male": "Male",
+  "female": "Female",
+  "other": "Other",
+  "email": "Email",
+  "phone": "Phone",
+  "select": "Select",
+  "speciality": "Speciality",
+  "select_speciality": "Select speciality",
+  "select_role": "Select role",
+  "physician": "Physicial",
+  "coach": "Coach",
+  "admin": "Admin"
+  
+}

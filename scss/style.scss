@@ -1,0 +1,584 @@
+@import "./var";
+@import "./common";
+@import "./highChart_custom.scss";
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 6px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  // box-shadow: inset 0 0 3px #ccc;
+  background-color: #fff;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #c7c7c7;
+  border-radius: 8px;
+}
+
+.blueLink {
+  color: $primary;
+  margin-left: 7px;
+  cursor: pointer;
+  font-weight: 400;
+}
+.otp-field {
+  display: flex;
+  .otp-field__input {
+    width: 42px;
+    height: 42px;
+    text-align: center;
+    margin-right: 8px;
+  }
+}
+// ======== theme dropdown menu =========
+.themeDropdown_menu {
+  border-radius: 8px;
+  box-shadow: 0px 0px 8px rgba(107, 108, 126, 0.25);
+  border: none;
+  .themeDropdown_menuIcon {
+    margin-right: 12px;
+    color: $iconColor;
+    line-height: 1;
+  }
+  .themeDropdown_menuImage {
+    height: 32px;
+    width: 32px;
+    margin-right: 0.8rem;
+  }
+  li {
+    padding: 10px 18px;
+    white-space: nowrap;
+    transition: 0.2s linear;
+    font-size: 14px;
+    cursor: pointer;
+    color: $textPrimary;
+    display: flex;
+    align-items: center;
+    &:hover {
+      background-color: $hoverItem;
+    }
+    &:active {
+      background-color: $secondary400;
+      color: #fff;
+    }
+  }
+}
+// ======== theme dropdown menu end=========
+
+// ======== searchBar =========
+.searchBar {
+  position: relative;
+  height: 40px;
+  display: inline-block;
+  min-width: 320px;
+  .searchIcon {
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    top: 10px;
+    left: 16px;
+    line-height: 1;
+  }
+  input {
+    height: 100%;
+    width: 392px;
+    padding: 0px 20px 0px 45px;
+    &:focus {
+      outline: none;
+      border-color: $secondary;
+    }
+    &::placeholder {
+      color: $iconColor;
+    }
+  }
+}
+
+// ======== searchBar end =========
+// ==== sidebar scs =====
+.sidebarCanvas {
+  padding: 2rem 2rem;
+}
+.sidebarCanvasHeader {
+  padding: 0;
+}
+.sidebarCanvasBody {
+  padding: 0;
+}
+// ==== sidebar scs end =====
+
+// ====theme select field ====
+.theme_select_field {
+  .select__control {
+    border: 1px solid #ccd1db !important;
+    border-radius: 8px;
+    font-size: 14px;
+    color: $textPrimary;
+    height: 40px;
+    cursor: pointer;
+  }
+  .select__value-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    flex-wrap: nowrap;
+  }
+  .select__indicator-separator {
+    display: none;
+  }
+  .select__menu {
+    border-radius: 8px;
+    box-shadow: 0px 0px 8px rgba(107, 108, 126, 0.25);
+    border: none;
+    font-size: 14px;
+    overflow: hidden;
+    padding: 10px 0;
+    z-index: 9;
+    .select__option {
+      padding: 10px 18px;
+      white-space: nowrap;
+      transition: 0.2s linear;
+      font-size: 14px;
+      cursor: pointer;
+      color: $textPrimary;
+
+      &:hover {
+        background-color: $hoverItem;
+        color: $textPrimary;
+      }
+      &:active {
+        background-color: $secondary400;
+        color: #fff;
+      }
+      &.select__option--is-selected {
+        background-color: $secondary600;
+        color: #fff;
+      }
+    }
+  }
+  .select__multi-value {
+    background-color: $secondary100;
+    border-radius: 10px;
+    display: flex;
+
+    .select__multi-value__remove {
+      color: $iconColor;
+      :hover {
+        background-color: none;
+      }
+    }
+  }
+  .menuItemWrap {
+    display: flex;
+    .menuItem_detail {
+      display: flex;
+      align-items: center;
+    }
+    .menuItem_check {
+      display: none;
+    }
+    .menuItem_close {
+      display: none;
+    }
+  }
+  .primaryDoctorWrap {
+    .select__option--is-selected {
+      background-color: $hoverItem !important;
+      .menuItem_detail {
+        width: 100%;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding-right: 20px;
+        p {
+          margin-left: 0px !important;
+        }
+      }
+      .menuItem_check {
+        display: flex;
+        align-items: center;
+        color: $secondary600;
+      }
+    }
+    .select__single-value {
+      .menuItemWrap {
+        align-items: center;
+        background-color: $secondary100;
+        padding: 2px 10px;
+        border-radius: 15px;
+        .menuItem_detail {
+          img {
+            height: 24px !important;
+            width: 24px !important;
+          }
+          p {
+            margin-left: 8px !important;
+          }
+        }
+        .menuItem_close {
+          display: flex;
+          align-items: center;
+          margin-left: 10px;
+          z-index: 1;
+        }
+        .select__clear-indicator {
+          position: absolute !important;
+          right: 200px !important;
+        }
+      }
+    }
+    .select__menu-list {
+      display: flex;
+      flex-direction: column;
+      .select__option--is-selected {
+        order: -1;
+      }
+    }
+  }
+  .filterDoctorWrap {
+    .select__option--is-selected {
+      background-color: $hoverItem !important;
+      .menuItem_detail {
+        width: 100%;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding-right: 20px;
+        p {
+          margin-left: 0px !important;
+        }
+      }
+      .menuItem_check {
+        display: flex;
+        align-items: center;
+        color: $secondary600;
+      }
+    }
+    .select__single-value {
+      .menuItemWrap {
+        align-items: center;
+        background-color: transparent;
+        padding: 2px 10px;
+        border-radius: 15px;
+        .menuItem_detail {
+          img {
+            height: 24px !important;
+            width: 24px !important;
+          }
+          p {
+            margin-left: 8px !important;
+          }
+        }
+        .select__clear-indicator {
+          position: absolute !important;
+          right: 200px !important;
+        }
+      }
+    }
+    .select__menu-list {
+      display: flex;
+      flex-direction: column;
+      .select__option--is-selected {
+        order: -1;
+      }
+    }
+  }
+  .select__placeholder {
+    font-size: 14px;
+    font-weight: 400;
+    color: $iconColor;
+  }
+}
+// ====theme select field end====
+
+// ==== theme radio buttons scs start =====
+
+.theme_radio_select {
+  display: flex;
+  .radio_select_btn {
+    label {
+      cursor: pointer;
+      background-color: $secondary100;
+      color: $headingColor;
+      padding: 6px 8px;
+      border-radius: 4px;
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.5;
+      margin-right: 8px;
+    }
+    input {
+      display: none;
+      &:checked {
+        & ~ label {
+          background-color: $secondary400;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+// ==== theme radio buttons scs end =====
+.cardPdf {
+  border: 1px solid #ccd1db;
+  padding: 12px 10px 10px;
+  display: flex;
+  border-radius: 6px;
+  min-width: 180px;
+  max-width: 200px;
+  position: relative;
+  .cardPdf_icon {
+    margin-right: 10px;
+    svg {
+      height: 20px;
+      width: 16px;
+    }
+  }
+  .cardPdf_content {
+    line-height: 1;
+    h6 {
+      color: $textPrimary;
+      font-size: 12px;
+      margin-bottom: 2px;
+      line-height: 1;
+    }
+    span {
+      color: $textSecondary;
+      font-size: 10px;
+      line-height: 1;
+    }
+  }
+  .delete_pdf {
+    position: absolute;
+    right: 6px;
+    top: 4px;
+    color: $iconColor;
+    padding-right: 4px;
+    cursor: pointer;
+    &:hover {
+      color: $textPrimary;
+    }
+    svg {
+      height: 11px;
+      width: 11px;
+    }
+  }
+}
+// ======== theme check box menu======
+.theme_checkBox_menu {
+  min-width: 300px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 8px rgba(107, 108, 126, 0.2);
+  border: none;
+  li {
+    padding: 10px 18px;
+    white-space: nowrap;
+    transition: 0.2s linear;
+    font-size: 14px;
+    cursor: pointer;
+    color: $textPrimary;
+    &:hover {
+      background-color: $hoverItem;
+    }
+  }
+}
+// =========== Date range picker customization ========
+.theme_dateRangePicker {
+  padding: 1rem;
+  border: 1px solid #eaecf0;
+  border-radius: 8px;
+  .rdrDayPassive {
+    display: none;
+  }
+  .rdrDefinedRangesWrapper,
+  .rdrDateDisplayWrapper {
+    display: none;
+  }
+  .rdrMonthName {
+    color: $headingColor;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 600;
+    padding-top: 0;
+  }
+  .rdrMonthsHorizontal {
+    .rdrMonth {
+      padding: 0 25px;
+      width: 332px;
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+  .rdrMonthAndYearWrapper {
+    margin-bottom: -22px;
+    padding-top: 0;
+    height: auto;
+    .rdrNextPrevButton {
+      background-color: none;
+      color: $iconColor;
+      i {
+        height: 10px;
+        width: 10px;
+      }
+      &:hover {
+        background-color: transparent;
+        i {
+          color: $headingColor;
+        }
+      }
+    }
+    .rdrPprevButton {
+      i {
+        border: none;
+        border-left: 2px solid currentColor;
+        border-bottom: 2px solid currentColor;
+        transform: rotate(45deg);
+      }
+    }
+    .rdrNextButton {
+      i {
+        border: none;
+        border-right: 2px solid currentColor;
+        border-bottom: 2px solid currentColor;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  .rdrMonthAndYearPickers {
+    display: none;
+  }
+  .rdrInRange {
+    background-color: #f0fbfd !important;
+  }
+  .rdrDay {
+    height: 50px;
+    border-radius: 50% !important;
+    &.rdrDayDisabled {
+      background-color: transparent;
+    }
+  }
+  .rdrDayNumber {
+    span {
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+  .rdrDay:not(.rdrDayPassive) {
+    .rdrInRange,
+    .rdrStartEdge,
+    .rdrEndEdge {
+      ~ .rdrDayNumber {
+        span {
+          color: $textPrimary !important;
+        }
+      }
+    }
+  }
+  .rdrDayInPreview,
+  .rdrDayStartPreview,
+  .rdrDayEndPreview {
+    color: $secondary400 !important;
+    z-index: 0;
+    border: none;
+    background-color: #f0fbfd;
+  }
+  .rdrDayInPreview {
+  }
+  .rdrDayStartPreview {
+    background-color: transparent !important;
+  }
+  .rdrDayStartPreview.rdrDayEndPreview {
+    border-radius: 50%;
+    background-color: trans;
+  }
+
+  .rdrStartEdge,
+  .rdrEndEdge {
+    background-color: transparent !important;
+    border: 1px solid $secondary400;
+    border-radius: 50%;
+    * {
+      color: $textPrimary !important;
+    }
+  }
+}
+// =========== Date range picker customization end ========
+
+.formSwitch {
+  display: flex;
+  align-items: center;
+  input {
+    height: 24px;
+    width: 48px !important;
+    margin-top: 0;
+  }
+  label {
+    font-size: 14px;
+    font-weight: 400;
+    color: $textPrimary;
+    margin-left: 10px;
+  }
+}
+
+// ============= Password customization start ===========
+
+.formFields {
+  .labelWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+    label {
+      margin-bottom: 0;
+    }
+    span {
+      color: $primary;
+      cursor: pointer;
+      font-size: 12px;
+    }
+  }
+  label {
+    font-size: 12px;
+    margin-bottom: 4px;
+    color: #6c7893;
+    font-weight: 400;
+  }
+}
+.passwordEye {
+  position: relative;
+  input {
+    padding-right: 36px;
+  }
+  .passwordEyeImg {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 22px;
+    line-height: 0;
+    img {
+      width: 100% !important;
+    }
+  }
+}
+
+.hidePassword {
+  color: red;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    height: 1px;
+    background-color: #a5adc0;
+    width: 25px;
+  }
+}
+
+// ============= Password customization end ===========
