@@ -1,5 +1,5 @@
 export const constants = {
-  apiBaseUrl: "http://api.glucare.health:8000/api/v1/",
+  apiBaseUrl: "https://api.glucare.health/api/v1/",
 };
 
 export const types = {
