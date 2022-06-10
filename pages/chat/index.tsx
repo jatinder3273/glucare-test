@@ -6,8 +6,10 @@ import dynamic from "next/dynamic";
 import "stream-chat-react/dist/css/index.css";
 
 const ChatInbox = dynamic(
-  () => import("@components/PagesComponent/Chat/ChatInbox"),
-  { loading: () => <p>Loading...</p> }
+  () => {
+    return import("@components/PagesComponent/Chat/ChatInbox");
+  },
+  { ssr: false }
 );
 
 const ChatStream = () => {
